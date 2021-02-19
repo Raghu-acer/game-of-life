@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'ltecomm' }
+    agent any
     stages {
         stage('SCM') {
             steps {
