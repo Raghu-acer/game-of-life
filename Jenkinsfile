@@ -1,8 +1,7 @@
 pipeline {
     agent any
     triggers {
-        cron('H */4 * * 1-5')
-        upstream(upstreamProjects: "gol1")
+        cron('H * * * 1-5')
     } 
     stages {
         stage('SCM') {
