@@ -2,9 +2,7 @@ pipeline {
     agent any
     triggers {
         cron('H */4 * * 1-5')
-    }
-    triggers {
-    upstream ('gol1,gol2', hudson.model.Result.SUCCESS)
+        upstream(upstreamProjects: "gol1")
     } 
     stages {
         stage('SCM') {
