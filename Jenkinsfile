@@ -4,7 +4,7 @@ pipeline {
         cron('H */4 * * 1-5')
     }
     triggers {
-    upstream ('gol2,gol1', hudson.model.Result.SUCCESS)
+    upstream ('gol1,gol2', hudson.model.Result.SUCCESS)
     } 
     stages {
         stage('SCM') {
